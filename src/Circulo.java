@@ -22,10 +22,10 @@ public class Circulo extends Figura {
 
     public String toString() {
         String texto = "";
-
-        for (double i = -this.raio; i < this.raio; i++) {
-            for (double j = -this.raio; j < this.raio; j++) {
-                if ((this.raio * this.raio) > ((i * i) + (j * j))) {
+        double raio = this.raio * 10;
+        for (double i = -raio; i < raio; i++) {
+            for (double j = -raio; j < raio; j++) {
+                if ((raio * raio) > ((i * i) + (j * j))) {
                     texto += '*';
                 } else {
                     texto += ' ';
