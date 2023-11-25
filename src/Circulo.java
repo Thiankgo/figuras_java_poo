@@ -22,7 +22,7 @@ public class Circulo extends Figura {
 
     public String toString() {
         String texto = "";
-        double raio = this.raio * 10;
+        double raio = this.raio;
         for (double i = -raio; i < raio; i++) {
             for (double j = -raio; j < raio; j++) {
                 if ((raio * raio) > ((i * i) + (j * j))) {
