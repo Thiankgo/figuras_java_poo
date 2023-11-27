@@ -1,17 +1,17 @@
 import java.awt.*;
 
-public class Triangulo extends Figura {
+public class Losango extends Figura {
     protected int base;
     protected int altura;
 
-    public Triangulo(int base, int altura, Color cor) {
+    public Losango(int base, int altura, Color cor) {
         this.base = base;
         this.altura = altura;
         this.cor = cor;
     }
 
     public int getBase() {
-        return base;
+        return this.base;
     }
 
     public void setBase(int base) {
@@ -19,7 +19,7 @@ public class Triangulo extends Figura {
     }
 
     public int getAltura() {
-        return altura;
+        return this.altura;
     }
 
     public void setAltura(int altura) {
@@ -27,11 +27,11 @@ public class Triangulo extends Figura {
     }
 
     public double area() {
-        return this.altura * this.base / 2;
+        return this.base * this.altura / 2.;
     }
 
     public String toString() {
-        return "Triângulo de base " + String.valueOf(base) + " e altura " + String.valueOf(altura);
+        return "Losango de base " + String.valueOf(altura) + " e altura " + String.valueOf(base);
     }
 
     public void desenhar(Graphics g) {
@@ -39,20 +39,22 @@ public class Triangulo extends Figura {
         int y = 500;
 
         int[] xPoints = {
-                x,
                 x - base / 2,
-                x + base / 2
+                x,
+                x + base / 2,
+                x
         };
 
         int[] yPoints = {
+                y,
                 y - altura / 2,
-                y + altura / 2,
+                y,
                 y + altura / 2
         };
 
-        Polygon triangulo = new Polygon(xPoints, yPoints, 3);
+        Polygon poligono = new Polygon(xPoints, yPoints, 4);
 
         g.setColor(cor);
-        g.fillPolygon(triangulo);  // Use fillPolygon to draw a filled triangle
+        g.fillPolygon(poligono);  // Use fillPolygon to draw a filled triangle
     }
 }

@@ -1,26 +1,28 @@
-public class Retangulo extends Figura {
-    protected double lado1;
-    protected double lado2;
+import java.awt.*;
 
-    public Retangulo(double lado1, double lado2, String cor) {
+public class Retangulo extends Figura {
+    protected int lado1;
+    protected int lado2;
+
+    public Retangulo(int lado1, int lado2, Color cor) {
         this.lado1 = lado1;
         this.lado2 = lado2;
         this.cor = cor;
     }
 
-    public double getLado1() {
+    public int getLado1() {
         return this.lado1;
     }
 
-    public void setLado1(double lado1) {
+    public void setLado1(int lado1) {
         this.lado1 = lado1;
     }
 
-    public double getLado2() {
+    public int getLado2() {
         return this.lado2;
     }
 
-    public void setLado2(double lado2) {
+    public void setLado2(int lado2) {
         this.lado2 = lado2;
     }
 
@@ -29,14 +31,11 @@ public class Retangulo extends Figura {
     }
 
     public String toString() {
-        String texto = "";
+        return "Retângulo de base " + String.valueOf(lado2) + " e altura " + String.valueOf(lado1);
+    }
 
-        for (int i = 0; i < this.lado1; i++) {
-            for (int j = 0; j < this.lado2; j++) {
-                texto += '*';
-            }
-            texto += '\n';
-        }
-        return texto;
+    public void desenhar(Graphics g) {
+        g.setColor(cor);
+        g.fillRect(500 - this.lado1 / 2, 500 - this.lado2 / 2, this.lado1, this.lado2);
     }
 }

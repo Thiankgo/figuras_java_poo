@@ -1,11 +1,16 @@
-public class Figura {
-    protected String cor;
+import javax.swing.*;
+import java.awt.*;
 
-    public void setCor(String cor) {
-        this.cor = cor;
+abstract public class Figura {
+    protected Color cor;
+
+    public void setCor(int r, int g, int b) {
+        this.cor = new Color(r, g, b);
     }
 
-    public String getCor() {
+    public Color getCor() {
         return this.cor;
     }
+
+    public abstract void desenhar(Graphics g);
 }

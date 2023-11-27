@@ -1,18 +1,19 @@
+import java.awt.*;
 import java.lang.Math;
 
 public class Circulo extends Figura {
-    protected double raio;
+    protected int raio;
 
-    public Circulo(double raio, String cor) {
+    public Circulo(int raio, Color cor) {
         this.raio = raio;
         this.cor = cor;
     }
 
-    public double getRaio() {
-        return raio;
+    public int getRaio() {
+        return this.raio;
     }
 
-    public void setRaio(double raio) {
+    public void setRaio(int raio) {
         this.raio = raio;
     }
 
@@ -20,19 +21,16 @@ public class Circulo extends Figura {
         return this.raio * this.raio * Math.PI;
     }
 
+    public int getDiametro() {
+        return this.raio * 2;
+    }
+
     public String toString() {
-        String texto = "";
-        double raio = this.raio;
-        for (double i = -raio; i < raio; i++) {
-            for (double j = -raio; j < raio; j++) {
-                if ((raio * raio) > ((i * i) + (j * j))) {
-                    texto += '*';
-                } else {
-                    texto += ' ';
-                }
-            }
-            texto += '\n';
-        }
-        return texto;
+        return "Círculo de raio " + String.valueOf(raio);
+    }
+
+    public void desenhar(Graphics g) {
+        g.setColor(cor);
+        g.fillOval(500 - getDiametro() / 2, 500 - getDiametro() / 2, getDiametro(), getDiametro());
     }
 }
