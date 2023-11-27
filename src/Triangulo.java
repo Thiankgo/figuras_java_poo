@@ -4,7 +4,9 @@ public class Triangulo extends Figura {
     protected int base;
     protected int altura;
 
-    public Triangulo(int base, int altura, Color cor) {
+    public Triangulo(int x, int y, int base, int altura, Color cor) {
+        this.x = x;
+        this.y = y;
         this.base = base;
         this.altura = altura;
         this.cor = cor;
@@ -35,9 +37,6 @@ public class Triangulo extends Figura {
     }
 
     public void desenhar(Graphics g) {
-        int x = 500;
-        int y = 500;
-
         int[] xPoints = {
                 x,
                 x - base / 2,

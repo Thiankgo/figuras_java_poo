@@ -3,7 +3,9 @@ import java.awt.*;
 public class Estrela extends Figura {
     protected int raio;
 
-    public Estrela(int raio, Color cor) {
+    public Estrela(int x, int y, int raio, Color cor) {
+        this.x = x;
+        this.y = y;
         this.raio = raio;
         this.cor = cor;
     }
@@ -13,23 +15,14 @@ public class Estrela extends Figura {
     }
 
     public void desenhar(Graphics g) {
-        int x = 500;
-        int y = 500;
-
         int[] xPoints = new int[10];
         int[] yPoints = new int[10];
 
         for (double i = 0; i < 10; i++) {
-            double r = 1;
-
-            if (i % 2 == 1) {
-                r = 0.382;
-            }
+            double r = i % 2 == 1 ? 0.382 : 1;
 
             xPoints[(int) i] = x + (int) (Math.cos(Math.PI * i / 5. - Math.PI / 10.) * raio * r);
             yPoints[(int) i] = y + (int) (Math.sin(Math.PI * i / 5. - Math.PI / 10.) * raio * r);
-
-            System.out.printf("%d %d\n", xPoints[(int) i], yPoints[(int) i]);
         }
 
         Polygon poligono = new Polygon(xPoints, yPoints, 10);

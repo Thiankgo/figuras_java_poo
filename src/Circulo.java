@@ -4,7 +4,9 @@ import java.lang.Math;
 public class Circulo extends Figura {
     protected int raio;
 
-    public Circulo(int raio, Color cor) {
+    public Circulo(int x, int y, int raio, Color cor) {
+        this.x = x;
+        this.y = y;
         this.raio = raio;
         this.cor = cor;
     }
@@ -31,6 +33,6 @@ public class Circulo extends Figura {
 
     public void desenhar(Graphics g) {
         g.setColor(cor);
-        g.fillOval(500 - getDiametro() / 2, 500 - getDiametro() / 2, getDiametro(), getDiametro());
+        g.fillOval(this.x - getDiametro() / 2, this.y - getDiametro() / 2, getDiametro(), getDiametro());
     }
 }

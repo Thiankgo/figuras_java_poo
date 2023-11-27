@@ -4,7 +4,9 @@ public class Retangulo extends Figura {
     protected int lado1;
     protected int lado2;
 
-    public Retangulo(int lado1, int lado2, Color cor) {
+    public Retangulo(int x, int y, int lado1, int lado2, Color cor) {
+        this.x = x;
+        this.y = y;
         this.lado1 = lado1;
         this.lado2 = lado2;
         this.cor = cor;
@@ -36,6 +38,6 @@ public class Retangulo extends Figura {
 
     public void desenhar(Graphics g) {
         g.setColor(cor);
-        g.fillRect(500 - this.lado1 / 2, 500 - this.lado2 / 2, this.lado1, this.lado2);
+        g.fillRect(this.x - this.lado1 / 2, this.y - this.lado2 / 2, this.lado1, this.lado2);
     }
 }

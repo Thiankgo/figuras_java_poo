@@ -4,7 +4,9 @@ public class Losango extends Figura {
     protected int base;
     protected int altura;
 
-    public Losango(int base, int altura, Color cor) {
+    public Losango(int x, int y, int base, int altura, Color cor) {
+        this.x = x;
+        this.y = y;
         this.base = base;
         this.altura = altura;
         this.cor = cor;
@@ -35,9 +37,6 @@ public class Losango extends Figura {
     }
 
     public void desenhar(Graphics g) {
-        int x = 500;
-        int y = 500;
-
         int[] xPoints = {
                 x - base / 2,
                 x,
