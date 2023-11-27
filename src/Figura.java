@@ -29,5 +29,8 @@ abstract public class Figura {
         this.y = y;
     }
 
+
+
+
     public abstract void desenhar(Graphics g);
 }

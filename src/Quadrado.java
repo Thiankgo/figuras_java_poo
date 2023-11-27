@@ -5,7 +5,14 @@ public class Quadrado extends Retangulo {
         super(x, y, lado, lado, cor);
     }
 
+    @Override
     public String toString() {
-        return "Quadrado de lado " + String.valueOf(lado1);
+        return "Quadrado{" +
+                "lado1=" + lado1 +
+                ", lado2=" + lado2 +
+                ", cor=" + cor +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

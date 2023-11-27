@@ -32,8 +32,15 @@ public class Losango extends Figura {
         return this.base * this.altura / 2.;
     }
 
+    @Override
     public String toString() {
-        return "Losango de base " + String.valueOf(altura) + " e altura " + String.valueOf(base);
+        return "Losango{" +
+                "base=" + base +
+                ", altura=" + altura +
+                ", cor=" + cor +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
     }
 
     public void desenhar(Graphics g) {

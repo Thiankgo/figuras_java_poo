@@ -32,8 +32,15 @@ public class Retangulo extends Figura {
         return this.lado1 * this.lado2;
     }
 
+    @Override
     public String toString() {
-        return "Retângulo de base " + String.valueOf(lado2) + " e altura " + String.valueOf(lado1);
+        return "Retangulo{" +
+                "lado1=" + lado1 +
+                ", lado2=" + lado2 +
+                ", cor=" + cor +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
     }
 
     public void desenhar(Graphics g) {

@@ -32,8 +32,15 @@ public class Triangulo extends Figura {
         return this.altura * this.base / 2;
     }
 
+    @Override
     public String toString() {
-        return "Triângulo de base " + String.valueOf(base) + " e altura " + String.valueOf(altura);
+        return "Triangulo{" +
+                "base=" + base +
+                ", altura=" + altura +
+                ", cor=" + cor +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
     }
 
     public void desenhar(Graphics g) {

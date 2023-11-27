@@ -14,6 +14,16 @@ public class Estrela extends Figura {
         return 10 * ((Math.tan(Math.PI / 10)) / (3 - Math.pow(Math.tan(Math.PI / 10), 2))) * (raio * raio);
     }
 
+    @Override
+    public String toString() {
+        return "Estrela{" +
+                "raio=" + raio +
+                ", cor=" + cor +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
+    }
+
     public void desenhar(Graphics g) {
         int[] xPoints = new int[10];
         int[] yPoints = new int[10];

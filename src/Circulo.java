@@ -27,8 +27,14 @@ public class Circulo extends Figura {
         return this.raio * 2;
     }
 
+    @Override
     public String toString() {
-        return "Círculo de raio " + String.valueOf(raio);
+        return "Circulo{" +
+                "raio=" + raio +
+                ", cor=" + cor +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
     }
 
     public void desenhar(Graphics g) {
