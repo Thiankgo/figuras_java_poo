@@ -5,6 +5,7 @@ abstract public class Figura {
     protected Color cor;
     protected int x;
     protected int y;
+
     public void setCor(int r, int g, int b) {
         this.cor = new Color(r, g, b);
     }
@@ -28,9 +29,6 @@ abstract public class Figura {
     public void setY(int y) {
         this.y = y;
     }
-
-
-
 
     public abstract void desenhar(Graphics g);
 }
