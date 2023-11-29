@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-abstract public class Figura {
+abstract public class Figura extends JFrame  {
     protected Color cor;
     protected int x;
     protected int y;
